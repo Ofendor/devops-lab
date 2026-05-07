@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
 #############################################
 # Creating an automated Backup Script
 # # Date: 2026-05

@@ -1,7 +1,26 @@
 #!/bin/bash
 
-# This is a Bacup script
-# Usage: ./backup.sh <source dir> <backup_name>
+#!/bin/bash
+#############################################
+# Creating an automated Backup Script
+# # Date: 2026-05
+#
+# Purpose:
+#   We will create a compressed backup of directories
+#   with timestamped filenames and input validation.
+#
+# Usage:
+#   via './backup.sh <source_directory> <backup_name>'
+#
+# Example:
+#   ./backup.sh /home/ofendor/devops-lab my-lab-backup
+#
+# Skills that we validate through this exercises:
+#   - Shell scripting with error handling (set -e)
+#   - Input validation ($# argument checking)
+#   - File operations (tar compression)
+#   - Variable manipulation and timestamps
+#############################################
 
 set -e #exit on error
 SOURCE_DIR="$1"

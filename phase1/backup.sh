@@ -12,7 +12,7 @@
 #   via './backup.sh <source_directory> <backup_name>'
 #
 # Example:
-#   ./backup.sh /home/ofendor/devops-lab my-lab-backup
+#   ./backup.sh /home/[user]/devops-lab my-lab-backup
 #
 # Skills that we validate through this exercises:
 #   - Shell scripting with error handling (set -e)

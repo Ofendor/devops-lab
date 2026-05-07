@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=devops
+      - DB_PASSWORD=devops123
+      - DB_NAME=devopsdb
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+    restart: unless-stopped
+  db:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=devopsdb
+      - MYSQL_USER=devops
+      - MYSQL_PASSWORD=devops123
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  adminer:
+    image: adminer
+    ports:
+      - "0.0.0.0:8080:8080"
+    networks: ["backend"]
+
+volumes:
+  db-data:
+networks:
+  backend:

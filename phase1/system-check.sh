@@ -1,7 +1,22 @@
 #!/bin/bash
 
-# System Health Check Script
-# Created: 06 May 2026
+#############################################
+# Basic System Health Check Script
+# Date: 2026-05
+#
+# Purpose:
+#   This generates a quick health report showing
+#   CPU, memory, disk, and network statistics.
+#
+# Usage:
+#   ./system-check.sh
+#
+# Skills demonstrated (you can add any other check you believe is necessary):
+#   - System monitoring commands (top, free, df)
+#   - Process inspection (ps aux)
+#   - Command substitution ($(command))
+#   - Formatted terminal output
+#############################################
 
 echo "====================================="
 echo "     SYSTEM HEALTH REPORT"

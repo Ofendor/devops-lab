@@ -22,5 +22,6 @@ Site Reliability Engineering (SRE) teams at Catalyst Cloud to maintain cloud ser
 - **Stack:** Python Flask
 - Dockerfile syntax, layer caching, HEALTHCHECK, running as non‑root
 - **Run it:** `docker build -t devops-flask:v1 . && docker run -p 5000:5000 devops-flask:v1`
-<img src="../screenshots/4. docker demo1.png" width="950" alt="System health check script output"/>
-<img src="../screenshots/4. docker demo2.png" width="450" alt="System health check script output"/>
+
+![Docker Demo 1](../screenshots/4. docker-demo1.png)
+![Docker Demo 2](../screenshots/4. docker-demo2.png)

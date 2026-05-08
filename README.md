@@ -15,7 +15,7 @@ understanding data sovereignty and cloud-native systems.
 ## Project Phases
 - **Phase 1 – Linux Fundamentals** → [View scripts](./phase1)
 - **Phase 2 – Docker & Observability** → [View projects](./phase2/docker)
-- **Phase 3 – Kubernetes** (in progress)
+- **Phase 3 – Kubernetes** → [View projects](./phase3)
 - **Phase 4 – Kubernetes Security**
 - **Phase 5 – Ansible & GitLab CI/CD**
 - **Phase 6 – Integrated Project**

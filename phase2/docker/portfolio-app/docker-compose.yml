@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    networks:
+      - backend
+  web:
+    build: ./web
+    environment:
+      - REDIS_HOST=redis
+      - APP_VERSION=1.0.0
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - backend
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+volumes:
+  redis-data:
+networks:
+  backend:

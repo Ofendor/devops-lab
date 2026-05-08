@@ -25,11 +25,11 @@ Dockerfiles are just recipes. You tell Docker what base image to use, what to in
 - Dockerfile syntax, layer caching, HEALTHCHECK, running as non‑root
 - **Run it:**
 ```bash
-cd ~/devops-lab/phase2/docker/first-app
-docker build -t devops-flask:v1 .
-docker run -d --name flask-app -p 5000:5000 devops-flask:v1
-curl http://localhost:5000
-docker rm -f flask-app
+cd ~/devops-lab/phase2/docker/first-app # Go to the folder with the Dockerfile and app code
+docker build -t devops-flask:v1 .  # Build the image from the Dockerfile (the "." means "current directory")
+docker run -d --name flask-app -p 5000:5000 devops-flask:v1 # Run the container in detached mode (-d), give it a name, map port 5000
+curl http://localhost:5000 # Test if the app responds — should return HTML
+docker rm -f flask-app # Force-remove the container when done
 ```
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png" width="850" alt="Docker Demo 1"/>
 
@@ -44,12 +44,12 @@ Docker Compose lets you run multiple containers that talk to each other. MySQL t
 - Service dependencies (`depends_on` with health checks), database persistence, multi‑container networking
 - **Run it via:**
 ```bash
-cd ~/devops-lab/phase2/docker/compose-app
-docker compose up -d
-docker compose ps
-curl http://localhost:5000
+cd ~/devops-lab/phase2/docker/compose-app # Go to the multi-service project folder
+docker compose up -d # Start all services (Flask app, MySQL database, Adminer UI) in the background
+docker compose ps # Check that all three containers are running and healthy
+curl http://localhost:5000 # Test the Flask app's main page
 curl http://localhost:5000/db-test #If you are using SSH on Gitbash/ PS use the VM IP
-docker compose down -v
+docker compose down -v # For clean start next time
 ```
 Testing via `curl` will show the following outcome.
 

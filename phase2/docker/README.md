@@ -53,3 +53,17 @@ Testing via `curl` will show the following outcome.
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose2.png" width="300" alt="Database Connected"/>
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose3.png" width="400" alt="Adminer Login"/>
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose4.png" width="400" alt="Adminer Database"/>
+
+### 3. Portfolio App (`portfolio-app/`)
+**Stack:** Nginx reverse proxy → Flask (Gunicorn) ↔ Redis
+
+```bash
+cd ~/devops-lab/phase2/docker/portfolio-app
+docker compose up -d --build
+docker compose ps
+curl http://localhost/
+curl http://localhost/health
+curl http://localhost/api/info
+docker compose down -v
+```
+

@@ -63,8 +63,8 @@ kubectl get svc hello # Find the assigned NodePort (e.g., 31948)
 curl http://localhost:31948   # replace with your actual port # Access the Service using the NodePort from the VM terminal
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.1.png" width="95000" alt="Lab 3 internal test"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.2.png" width="600" alt="Lab 3 NodePort access"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.1.png" width="950" alt="Lab 3 internal test"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.2.png" width="950" alt="Lab 3 NodePort access"/>
 
 ```
 # Clean up

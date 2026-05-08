@@ -45,12 +45,12 @@ log " Starting server setup..."
 log "================================="
 
 # 1. System update
-log "1/7 U[dating system packages..."
+log "1/4 U[dating system packages..."
 apt update && apt upgrade -y >> "$LOG_FILE" 2>&1
 log "[DONE] System Updated!"
 
 # 2. Install Essential Packages
-log "2/7 Installing essential packages..."
+log "2/4 Installing essential packages..."
 apt install -y \
 	curl wget git vim htop net-tools tree unzip\
 	build-essential software-properties-common \
@@ -59,12 +59,12 @@ apt install -y \
 log "[DONE] Essential packages installed!"
 
 # 3. Verify User & Group
-log "3/7 Verifying user and group..."
+log "3/4 Verifying user and group..."
 id "$APP_USER" &>/dev/null && log "[OK] User $APP_USER exists" || log "[WARN] User $APP_USER not found"
 getent group "$APP_GROUP" &>/dev/null && log "[OK] Group $APP_GROUP exists" || log "[WARN] Group $APP_GROUP not found"
 
 # 4. Configuring Firewall
-log "4/7 Configuring Firewall..."
+log "4/4 Configuring Firewall..."
 sudo ufw default deny incoming >> "$LOG_FILE" 2>&1
 sudo ufw default allow outgoing >> "$LOG_FILE" 2>&1
 sudo ufw allow "$SSH_PORT"/tcp >> "$LOG_FILE" 2>&1

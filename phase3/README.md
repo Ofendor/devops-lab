@@ -64,6 +64,7 @@ curl http://localhost:31948   # replace with your actual port # Access the Servi
 ```
 
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.1.png" width="950" alt="Lab 3 internal test"/>
+
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.2.png" width="950" alt="Lab 3 NodePort access"/>
 
 ```
@@ -99,4 +100,4 @@ kubectl delete configmap app-config
 kubectl delete secret db-credentials
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask4.png" width="600" alt="Lab 4 environment variables"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask4.png" width="950" alt="Lab 4 environment variables"/>

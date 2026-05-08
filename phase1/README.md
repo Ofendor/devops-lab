@@ -29,7 +29,7 @@ Phase 1 transformed a simple Ubuntu Server 26.04 LTS VM into a hardened, DevOps-
 **Purpose:** Automated directory backup. Creates timestamped `.tar.gz` archives with input validation and error handling  
 **Run with:** `./backup.sh <source_dir> <backup_name>`
 
-<img src="../screenshots/3. server-setup" width="750" alt="System health check script output"/>
+<img src="../screenshots/3. server-setup.png" width="750" alt="System health check script output"/>
 
 ## Why This Matters for DevOps
 - Linux is the operating system of the cloud — 96% of servers run Linux

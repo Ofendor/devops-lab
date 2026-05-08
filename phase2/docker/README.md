@@ -68,7 +68,7 @@ curl http://localhost/health # Test the health check — asks "are you okay?"
 curl http://localhost/api/info # Test the info endpoint — asks "what environment are you running in?"
 docker compose down -v
 ```
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/nginx1.png" width="850" alt="Portfolio App Nginx"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/nginx1.png" width="950" alt="Portfolio App Nginx"/>
 
 ### 4. Observability Stack (`monitoring/`)
 **Stack:** Prometheus + Node Exporter + Grafana
@@ -85,5 +85,5 @@ docker compose down -v # Remove everything when finished
 ```
 Access Grafana at `http://<VM-IP>:3000 (login admin/admin)`, add Prometheus data source `(URL: http://prometheus:9090)`, and import `Node Exporter Full dashboard (ID: 1860)`.
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/prome-grafa1.png" width="600" alt="Prometheus and Node Exporter health"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/prome-grafa1.png" width="900" alt="Prometheus and Node Exporter health"/>
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/prome-grafa2.png" width="850" alt="Grafana dashboard showing system metrics"/>

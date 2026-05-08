@@ -66,4 +66,4 @@ curl http://localhost/health # Test the health check — asks "are you okay?"
 curl http://localhost/api/info # Test the info endpoint — asks "what environment are you running in?"
 docker compose down -v
 ```
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/nginx1.png" width="600" alt="Portfolio App Nginx"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/nginx1.png" width="850" alt="Portfolio App Nginx"/>

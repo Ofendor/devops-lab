@@ -29,8 +29,10 @@ docker run -d --name flask-app -p 5000:5000 devops-flask:v1
 curl http://localhost:5000
 docker rm -f flask-app
 ```
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png" width="600" alt="Docker Demo 1"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo2.png" width="600" alt="Docker Demo 2"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png" width="850" alt="Docker Demo 1"/>
+
+Testing via `curl` will show the following outcome. 
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo2.png" width="400" alt="Docker Demo 2"/>
 
 ### 2. Multi‑Service App (`compose-app/`)
 - **Stack:** Flask + MySQL + Adminer

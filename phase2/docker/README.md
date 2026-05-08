@@ -58,12 +58,12 @@ Testing via `curl` will show the following outcome.
 **Stack:** Nginx reverse proxy → Flask (Gunicorn) ↔ Redis
 
 ```bash
-cd ~/devops-lab/phase2/docker/portfolio-app
+cd ~/devops-lab/phase2/docker/portfolio-app #position within the continer location to deploy the app
 docker compose up -d --build
-docker compose ps
-curl http://localhost/
-curl http://localhost/health
-curl http://localhost/api/info
+docker compose ps # Check that all three services are running and healthy
+curl http://localhost/  # Test the main entrance — asks the app "who are you?"
+curl http://localhost/health # Test the health check — asks "are you okay?"
+curl http://localhost/api/info # Test the info endpoint — asks "what environment are you running in?"
 docker compose down -v
 ```
-
+<img src="nginx1.png" width="400" alt="Nginx"/>

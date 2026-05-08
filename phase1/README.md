@@ -17,9 +17,7 @@ Phase 1 transformed a simple Ubuntu Server 26.04 LTS VM into a hardened, DevOps-
 **Purpose:** Fully automated update packages, installs DevOps tools, configures firewall, hardens SSH, creates lab directory structure  
 **Run with:** `sudo ./server-setup.sh`
 
-<div align="center">
-  <img src="screenshots/1. system-check.png" width="950" alt="PowerShell pre-installation verification results"/>
-  </div>
+<img src="../screenshots/1. system-check.png" width="950" alt="System health check script output"/>
 
 ### 2. `system-check.sh`
 **Purpose:** Quick system health report  

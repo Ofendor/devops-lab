@@ -30,7 +30,7 @@ curl http://localhost:5000
 docker rm -f flask-app
 ```
 ![Docker Demo 1](https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png)
-![Docker Demo 2](https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo2.png)
+<img src="[https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose1.png](https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo2.png)" width="600" alt="Docker Demo 2"/>
 
 ### 2. Multi‑Service App (`compose-app/`)
 - **Stack:** Flask + MySQL + Adminer

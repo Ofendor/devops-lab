@@ -15,3 +15,12 @@ Site Reliability Engineering (SRE) teams at Catalyst Cloud to maintain cloud ser
 | **Security** | Non‑root container users, firewall (UFW), `.dockerignore`, HEALTHCHECK |
 | **Infrastructure Awareness** | OpenStack concepts (Nova, Cinder, Swift, Neutron, Keystone, Glance) |
 | **Sovereignty** | All services run locally respecting data sovereignty principles |
+
+## Projects
+
+### 1. First Custom Image (`first-app/`)
+- **Stack:** Python Flask
+- Dockerfile syntax, layer caching, HEALTHCHECK, running as non‑root
+- **Run it:** `docker build -t devops-flask:v1 . && docker run -p 5000:5000 devops-flask:v1`
+<img src="../screenshots/4. docker demo1.png" width="950" alt="System health check script output"/>
+<img src="../screenshots/4. docker demo2.png" width="450" alt="System health check script output"/>

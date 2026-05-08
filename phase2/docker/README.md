@@ -44,3 +44,7 @@ curl http://localhost:5000
 curl http://localhost:5000/db-test #If you are using SSH on Gitbash/ PS use the VM IP
 docker compose down -v
 ```
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose1.png" width="600" alt="Docker Compose Up"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose2.png" width="600" alt="Database Connected"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose3.png" width="400" alt="Adminer Login"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/5-compose4.png" width="600" alt="Adminer Database"/>

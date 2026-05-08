@@ -14,4 +14,4 @@ Site Reliability Engineering (SRE) teams at Catalyst Cloud to maintain cloud ser
 | **Observability** | Prometheus metrics scraping, Node Exporter, Grafana dashboards |
 | **Security** | Non‑root container users, firewall (UFW), `.dockerignore`, HEALTHCHECK |
 | **Infrastructure Awareness** | OpenStack concepts (Nova, Cinder, Swift, Neutron, Keystone, Glance) |
-| **Sovereignty** | All services run locally – respecting New Zealand data sovereignty principles |
+| **Sovereignty** | All services run locally respecting data sovereignty principles |

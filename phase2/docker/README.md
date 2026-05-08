@@ -21,13 +21,14 @@ Site Reliability Engineering (SRE) teams at Catalyst Cloud to maintain cloud ser
 ### 1. First Custom Image (`first-app/`)
 - **Stack:** Python Flask
 - Dockerfile syntax, layer caching, HEALTHCHECK, running as non‑root
-- **Run it:** ```bash
+- **Run it:**
+```bash
 cd ~/devops-lab/phase2/docker/first-app
 docker build -t devops-flask:v1 .
 docker run -d --name flask-app -p 5000:5000 devops-flask:v1
 curl http://localhost:5000
 docker rm -f flask-app
-
+```
 ![Docker Demo 1](https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png)
 ![Docker Demo 2](https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo2.png)
 

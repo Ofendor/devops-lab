@@ -19,6 +19,8 @@ Site Reliability Engineering (SRE) teams at Catalyst Cloud to maintain cloud ser
 ## Projects
 
 ### 1. First Custom Image (`first-app/`)
+Dockerfiles are just recipes. You tell Docker what base image to use, what to install, and how to run your app. The hardest part was getting the triple-quote syntax right — Python is picky (case sensitive).
+
 - **Stack:** Python Flask
 - Dockerfile syntax, layer caching, HEALTHCHECK, running as non‑root
 - **Run it:**
@@ -36,6 +38,8 @@ Testing via `curl` will show the following outcome.
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo2.png" width="400" alt="Docker Demo 2"/>
 
 ### 2. Multi‑Service App (`compose-app/`)
+Docker Compose lets you run multiple containers that talk to each other. MySQL takes forever to start, so the `depends_on` with `condition: service_healthy` was a lifesaver — no more guessing when the database is ready.
+
 - **Stack:** Flask + MySQL + Adminer
 - Service dependencies (`depends_on` with health checks), database persistence, multi‑container networking
 - **Run it via:**

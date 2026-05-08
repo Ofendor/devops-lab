@@ -57,6 +57,8 @@ Testing via `curl` will show the following outcome.
 ### 3. Portfolio App (`portfolio-app/`)
 **Stack:** Nginx reverse proxy → Flask (Gunicorn) ↔ Redis
 
+Nginx acts like a receptionist for the apps, it handles incoming traffic and passes requests to Flask. Redis is just a fast notepad for counting visits. Simple tools, powerful combo.
+
 ```bash
 cd ~/devops-lab/phase2/docker/portfolio-app #position within the continer location to deploy the app
 docker compose up -d --build
@@ -67,3 +69,21 @@ curl http://localhost/api/info # Test the info endpoint — asks "what environme
 docker compose down -v
 ```
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/nginx1.png" width="850" alt="Portfolio App Nginx"/>
+
+### 4. Observability Stack (`monitoring/`)
+**Stack:** Prometheus + Node Exporter + Grafana
+
+Collects real-time system metrics (CPU, memory, disk, network) from the VM and displays them on a dashboard – the same tools used by SRE teams at Catalyst Cloud. Prometheus scrapes system metrics, Grafana visualises them.
+
+```bash
+cd ~/devops-lab/phase2/docker/monitoring
+docker compose up -d # Start Prometheus, Node Exporter, and Grafana in the background
+docker compose ps # Verify all three services are running
+curl http://localhost:9090/-/healthy # Check Prometheus health – it's ready to scrape metrics
+curl http://localhost:9100/metrics | head -5 # View raw system metrics from Node Exporter
+docker compose down -v # Remove everything when finished
+```
+Access Grafana at `http://<VM-IP>:3000 (login admin/admin)`, add Prometheus data source `(URL: http://prometheus:9090)`, and import `Node Exporter Full dashboard (ID: 1860)`.
+
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/prome-grafa1.png" width="600" alt="Prometheus and Node Exporter health"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/prome-grafa2.png" width="850" alt="Grafana dashboard showing system metrics"/>

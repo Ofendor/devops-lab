@@ -35,4 +35,12 @@ docker rm -f flask-app
 ### 2. Multi‑Service App (`compose-app/`)
 - **Stack:** Flask + MySQL + Adminer
 - Service dependencies (`depends_on` with health checks), database persistence, multi‑container networking
-- **Run it via:** `docker compose up -d`
+- **Run it via:**
+```bash
+cd ~/devops-lab/phase2/docker/compose-app
+docker compose up -d
+docker compose ps
+curl http://localhost:5000
+curl http://localhost:5000/db-test #If you are using SSH on Gitbash/ PS use the VM IP
+docker compose down -v
+```

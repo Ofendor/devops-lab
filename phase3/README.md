@@ -46,7 +46,7 @@ kubectl rollout undo deployment/web #from here just clean up everything
 kubectl delete deployment web
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask2.2.png" width="600" alt="Lab 2 rollout/rollback"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask2.2.png" width="950" alt="Lab 2 rollout/rollback"/>
 
 - Lab 3 - Services and Networking
  Learn how to expose pods so they can talk to each other `(ClusterIP)` and to the outside world `(NodePort)`. 
@@ -63,7 +63,7 @@ kubectl get svc hello # Find the assigned NodePort (e.g., 31948)
 curl http://localhost:31948   # replace with your actual port # Access the Service using the NodePort from the VM terminal
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.1.png" width="600" alt="Lab 3 internal test"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.1.png" width="95000" alt="Lab 3 internal test"/>
 <img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/6-podtask3.2.png" width="600" alt="Lab 3 NodePort access"/>
 
 ```

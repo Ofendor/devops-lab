@@ -31,7 +31,7 @@ docker run -d --name flask-app -p 5000:5000 devops-flask:v1 # Run the container 
 curl http://localhost:5000 # Test if the app responds — should return HTML
 docker rm -f flask-app # Force-remove the container when done
 ```
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png" width="850" alt="Docker Demo 1"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/4-docker-demo1.png" width="950" alt="Docker Demo 1"/>
 
 Testing via `curl` will show the following outcome.
 

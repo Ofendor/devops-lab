@@ -17,17 +17,19 @@ Phase 1 transformed a simple Ubuntu Server 26.04 LTS VM into a hardened, DevOps-
 **Purpose:** Fully automated update packages, installs DevOps tools, configures firewall, hardens SSH, creates lab directory structure  
 **Run with:** `sudo ./server-setup.sh`
 
-<img src="../screenshots/1. system-check.png" width="950" alt="System health check script output"/>
+<img src="../screenshots/1. system-check.png" width="850" alt="System health check script output"/>
 
 ### 2. `system-check.sh`
-**Purpose:** Quick system health report  
-**What it does:** Displays CPU usage, memory stats, disk usage, top processes, network info  
+**Purpose:** Quick system health report. Displays CPU usage, memory stats, disk usage, top processes, network info  
 **Run with:** `./system-check.sh`
 
+<img src="../screenshots/2. backup.png" width="650" alt="System health check script output"/>
+
 ### 3. `backup.sh`
-**Purpose:** Automated directory backup with validation  
-**What it does:** Creates timestamped `.tar.gz` archives with input validation and error handling  
+**Purpose:** Automated directory backup. Creates timestamped `.tar.gz` archives with input validation and error handling  
 **Run with:** `./backup.sh <source_dir> <backup_name>`
+
+<img src="../screenshots/3. server-setup" width="750" alt="System health check script output"/>
 
 ## Why This Matters for DevOps
 - Linux is the operating system of the cloud — 96% of servers run Linux
@@ -36,11 +38,5 @@ Phase 1 transformed a simple Ubuntu Server 26.04 LTS VM into a hardened, DevOps-
 - These scripts demonstrate the automation mindset that separates DevOps engineers from manual operators
 
 ## Environment
-- OS: Ubuntu Server 26.04 LTS (Resolute Raccoon)
-- Kernel: 7.0.0-15-generic
+- OS: Ubuntu Server 26.04 LTS
 - Virtualization: VirtualBox
-- User: ofendor
-
-## References
-- Ubuntu. (2026). *Ubuntu Server Guide*. https://ubuntu.com/server/docs
-- Linux Foundation. (2024). *Introduction to Linux*. https://training.linuxfoundation.org/

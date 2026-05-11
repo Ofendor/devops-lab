@@ -3,12 +3,18 @@
 This phase covers essential Kubernetes security controls: 
 RBAC, Network Policies, Pod Security Standards, 
 Secrets management, and image vulnerability scanning.
+I hardened a Kubernetes cluster with five layers of defence:
+who can access the cluster, how pods talk to each other, how containers
+are allowed to run, how secrets are handled, and whether container images
+contain known vulnerabilities.
 
 
 ## Labs
 - Lab 1 – RBAC
 Limiting cluster access so a user (service account) can only
-view pods, not delete them.
+view pods, not delete them. Real‑world operations often involve multiple teams sharing a cluster.
+RBAC follows the principle of least privilege, ensuring that a developer
+or an automated pipeline never accidentally deletes production resources.
 
 ```bash
 kubectl create serviceaccount viewer # Create a service account named "viewer"
@@ -30,7 +36,10 @@ kubectl auth can-i delete pods --as=system:serviceaccount:default:viewer
 
 - Lab 2 – Network Policies: Pod-level Firewall
 Blocking all incoming traffic to a backend pod, then prove
-the frontend can no longer reach it.
+the frontend can no longer reach it. By default, any pod can 
+talk to any other pod in the cluster. Network Policies shrink 
+the blast radius of a compromise. If an attacker takes
+over the frontend, they still cannot reach the backend.
 
 ```
 # Create two deployments: frontend and backend
@@ -54,7 +63,10 @@ kubectl exec <frontend-pod> -- wget -qO- --timeout=2 http://<backend-IP>
 
 - Lab 3 – Pod Security Standards
 Compare a pod that runs as root (insecure) with one that
-uses a non‑root user (secure).
+uses a non‑root user (secure). Running containers as root inside 
+the pod can allow escape to the host node. Pod Security
+Standards enforce that containers only use the privileges
+they truly need, which is a basic hardening requirement.
 
 ```
 # Create a pod without any securityContext. It runs as root by default
@@ -75,6 +87,8 @@ kubectl exec good-pod -- id                # uid=101(nginx)  ← secure version
 - Lab 4 – Secrets Management
 Showing that Kubernetes Secrets are only base64‑encoded
 (not encrypted), and demonstrate mounting them as files for safer use.
+Mounting secrets as files rather than environment
+variables prevents accidental leaks in logs or process listings.
 
 ```
 # Create a Secret from a literal value
@@ -99,6 +113,9 @@ kubectl exec secret-demo -- cat /etc/myapp/api-key   # SuperSecret123!
 Scanning container images for known vulnerabilities before
 they are deployed. A modern Alpine image is compared with an old release
 to show how outdated images dramatically increase risk.
+CVEs (Common Vulnerabilities and Exposures) are public records of
+security flaws. Scanning for CVEs catches old libraries with known
+exploits, preventing attackers from walking in through an open door.
 
 ```
 # Install Grype (lightweight, no huge database download required)

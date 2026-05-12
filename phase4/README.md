@@ -25,7 +25,7 @@ kubectl auth can-i get pods --as=system:serviceaccount:default:viewer
 kubectl auth can-i delete pods --as=system:serviceaccount:default:viewer
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase4-task1.png" width="600" alt="RBAC test"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase4-task1.png" width="800" alt="RBAC test"/>
 
 
 - Lab 2 – Network Policies: Pod-level Firewall
@@ -49,8 +49,8 @@ kubectl apply -f deny-all-backend.yml
 kubectl exec <frontend-pod> -- wget -qO- --timeout=2 http://<backend-IP>
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task2.1.png" width="600" alt="Network policy block – before"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task2.2.png" width="600" alt="Network policy block – after"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task2.1.png" width="800" alt="Network policy block – before"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task2.2.png" width="800" alt="Network policy block – after"/>
 
 - Lab 3 – Pod Security Standards
 Compare a pod that runs as root (insecure) with one that
@@ -66,10 +66,10 @@ kubectl apply -f good-pod.yml
 kubectl exec good-pod -- id                # uid=101(nginx)  ← secure version
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.1.png" width="600" alt="Bad pod runs as root"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.2.png" width="600" alt="Good pod creation"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.3.png" width="600" alt="Good pod running"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.4.png" width="600" alt="Good pod non‑root user"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.1.png" width="800" alt="Bad pod runs as root"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.2.png" width="800" alt="Good pod creation"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.3.png" width="800" alt="Good pod running"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task3.4.png" width="800" alt="Good pod non‑root user"/>
 
 
 - Lab 4 – Secrets Management
@@ -93,7 +93,7 @@ kubectl apply -f secret-pod.yml
 kubectl exec secret-demo -- cat /etc/myapp/api-key   # SuperSecret123!
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task4.png" width="600" alt="Secrets demo"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task4.png" width="800" alt="Secrets demo"/>
 
 - Lab 5 –  Image Vulnerability Scanning
 Scanning container images for known vulnerabilities before
@@ -113,5 +113,5 @@ grype nginx:1.19
 # → 40 critical, 159 high, 194 medium, 35 low
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task5.1.png" width="600" alt="Grype alpine"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task5.2.png" width="600" alt="Grype old nginx comparison"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task5.1.png" width="800" alt="Grype alpine"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/Phase4-task5.2.png" width="800" alt="Grype old nginx comparison"/>

@@ -17,7 +17,7 @@ understanding data sovereignty and cloud-native systems.
 - **Phase 2 – Docker & Observability** → [View projects](./phase2/docker)
 - **Phase 3 – Kubernetes** → [View projects](./phase3)
 - **Phase 4 – Kubernetes Security** → [View projects](./phase4)
-- **Phase 5 – Ansible & GitLab CI/CD**
+- **Phase 5 – Ansible & GitLab CI/CD** → [View projects](./phase5)
 - **Phase 6 – Integrated Project**
 
 Key highlights

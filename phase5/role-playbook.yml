@@ -1,0 +1,6 @@
+---
+- name: Deploy nginx using a role
+  hosts: local
+  become: yes
+  roles:
+    - nginx_role

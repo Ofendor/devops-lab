@@ -35,7 +35,7 @@ docker build -t flask-api:latest .
 docker save flask-api:latest | sudo k3s ctr images import -
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab1.png" width="600" alt="Lab 1"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab1.png" width="800" alt="Lab 1"/>
 
 ## Lab 2 – Deploy Redis
 Launch a Redis instance that the Flask API will use to store visit counts.

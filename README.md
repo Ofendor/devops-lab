@@ -18,7 +18,7 @@ understanding data sovereignty and cloud-native systems.
 - **Phase 3 – Kubernetes** → [View projects](./phase3)
 - **Phase 4 – Kubernetes Security** → [View projects](./phase4)
 - **Phase 5 – Ansible & GitLab CI/CD** → [View projects](./phase5)
-- **Phase 6 – Integrated Project**
+- **Phase 6 – Integrated Project** → [View projects](./phase6)
 
 Key highlights
 - Prometheus and Grafana for system monitoring

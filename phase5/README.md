@@ -27,9 +27,9 @@ ansible -i inventory.ini local -m setup | head -40
 ansible -i inventory.ini local -m shell -a "uptime"
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab1.1.png" width="600" alt="Ansible ad‑hoc ping"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab1.2.png" width="600" alt="Ansible setup facts"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab1.3.png" width="600" alt="Ansible shell uptime"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab1.1.png" width="800" alt="Ansible ad‑hoc ping"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab1.2.png" width="800" alt="Ansible setup facts"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab1.3.png" width="800" alt="Ansible shell uptime"/>
 
 
 - Lab 2 – First playbook
@@ -46,7 +46,7 @@ ansible-playbook -i inventory.ini webserver.yml --ask-become-pass
 ansible-playbook -i inventory.ini webserver.yml
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab2.png" width="600" alt="Playbook run and nginx status"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab2.png" width="800" alt="Playbook run and nginx status"/>
 
 - Lab 3 – Variables and templates
 Making playbooks reusable by moving configuration into variables
@@ -68,8 +68,8 @@ ansible-playbook -i inventory.ini template-playbook.yml
 curl http://localhost:8080   # Should display "Hello from <hostname> on port 8080"
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab3.1.png" width="600" alt="Template playbook run"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab3.2.png" width="600" alt="Curl output from template"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab3.1.png" width="800" alt="Template playbook run"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab3.2.png" width="800" alt="Curl output from template"/>
 
 - Lab 4 – Roles
 Putting package tasks, handlers, templates, and variables into a reusable
@@ -87,7 +87,7 @@ nano role-playbook.yml
 ansible-playbook -i inventory.ini role-playbook.yml
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab4.png" width="600" alt="Role‑based playbook run"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab4.png" width="800" alt="Role‑based playbook run"/>
 
 - Lab 5 – Automating Kubernetes with Ansible
 Use Ansible’s Kubernetes modules to create Deployments and Services
@@ -110,5 +110,5 @@ kubectl delete deployment nginx-ansible
 kubectl delete svc nginx-ansible-svc
 ```
 
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab5.1.png" width="600" alt="Ansible Kubernetes playbook run"/>
-<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab5.2.png" width="600" alt="Curl output from Kubernetes deployment"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab5.1.png" width="800" alt="Ansible Kubernetes playbook run"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase5lab5.2.png" width="800" alt="Curl output from Kubernetes deployment"/>

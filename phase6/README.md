@@ -46,6 +46,7 @@ kubectl apply -f ~/devops-lab/phase6/k8s/redis.yml
 # Wait for Redis to be ready
 kubectl wait --for=condition=ready pod -l app=redis --timeout=60s
 ```
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab2.png" width="800" alt="Lab 2"/>
 
 ## Lab 3 – Deploy the Flask API
 Run the Flask API with two replicas, connected to Redis.
@@ -56,6 +57,7 @@ kubectl apply -f ~/devops-lab/phase6/k8s/flask-api.yml
 # Wait for the Flask pods to be ready
 kubectl wait --for=condition=ready pod -l app=flask-api --timeout=60s
 ```
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab3.png" width="800" alt="Lab 3"/>
 
 ## Lab 4 – Deploy Nginx Reverse Proxy
 Set up Nginx to forward requests to the Flask API and expose the stack externally via NodePort.
@@ -66,6 +68,7 @@ kubectl apply -f ~/devops-lab/phase6/k8s/nginx.yml
 # Wait for Nginx to be ready
 kubectl wait --for=condition=ready pod -l app=nginx --timeout=60s
 ```
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab4.png" width="800" alt="Lab 4"/>
 
 ## Lab 5 – Apply Network Policy (Security)
 Restrict traffic so that only Nginx can communicate with the Flask API, reducing the attack surface.
@@ -76,6 +79,7 @@ kubectl apply -f ~/devops-lab/phase6/k8s/network-policy.yml
 # Verify the policy exists
 kubectl get networkpolicy allow-nginx-to-flask
 ```
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab5.png" width="800" alt="Lab 5"/>
 
 ## Lab 6 – Testing the Full Stack
 Verify the entire pipeline by sending requests to the public endpoint.
@@ -86,6 +90,8 @@ curl http://localhost:30080/
 # Test the health check (should report Redis connectivity)
 curl http://localhost:30080/health
 ```
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab6.png" width="800" alt="Lab 6"/>
+<img src="https://raw.githubusercontent.com/Ofendor/devops-lab/main/screenshots/phase6lab6.1.png" width="400" alt="Lab 6"/>
 
 ---
 

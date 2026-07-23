@@ -1,13 +1,3 @@
-<!-- HTML format (recommended for centering and resizing) -->
-<p align="center">
-  <img src="./assets/banner.png" alt="Project Banner" width="100%">
-</p>
-
-<!-- Standard Markdown format -->
-![Project Banner](./assets/banner.png)
-
-
-
 # DevOps Portfolio Lab [Junior set up]
 A hands-on DevOps project covering Linux, Docker, Kubernetes, 
 Ansible, and cloud-native practices, built entirely on a single Ubuntu LTS
